@@ -46,8 +46,10 @@ def run_baseline():
     with open(VAL_JSON_PATH, "r", encoding="utf-8") as f:
         val_data = json.load(f)
 
+    print("type:", type(val_data))
+    print("len:", len(val_data))
     random.seed(RANDOM_SEED)
-    samples = random.sample(val_data.values(), N_SAMPLES)
+    samples = random.sample(val_data, N_SAMPLES)
 
     results = []
 
