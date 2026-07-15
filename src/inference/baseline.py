@@ -47,9 +47,11 @@ def run_baseline():
         val_data = json.load(f)
 
     random.seed(RANDOM_SEED)
-    samples = random.sample(val_data, N_SAMPLES)
+    samples = random.sample(list(val_data.values()), N_SAMPLES)
 
     results = []
+
+
 
     for i, record in enumerate(samples):
 
@@ -113,6 +115,9 @@ def run_baseline():
 
     print(f"\nСохранено {len(results)} результатов в {OUTPUT_PATH}")
 
+print(run_baseline)
 
 if __name__ == "__main__":
     run_baseline()
+
+
