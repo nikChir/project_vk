@@ -216,3 +216,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project data (large files, not stored in git)
+data/raw/
+data/images(coco)/
+models/pretrained/
