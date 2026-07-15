@@ -1,15 +1,3 @@
-"""
-Baseline-инференс: прогоняет llava-gemma-2b-lora "как есть" (до дообучения)
-на нескольких случайных примерах из val-сплита и сравнивает сгенерированный
-ответ с эталонным ответом (тем, что был сгенерирован GPT-учителем в датасете).
-
-Цель: зафиксировать точку отсчёта "было" — без этого нельзя будет объективно
-показать, что LoRA-дообучение что-то улучшило.
-
-Результаты сохраняются в outputs/logs/baseline_results.json — чтобы не
-пересчитывать заново и можно было потом сравнить с результатами "after".
-"""
-
 import json
 import random
 from pathlib import Path
@@ -20,23 +8,23 @@ from transformers import AutoTokenizer
 
 from src.inference.load_model import load_model_and_processor, MODEL_PATH
 
-
 VAL_JSON_PATH = "data/raw/val.json"
 VAL_IMAGES_DIR = "data/images(coco)/val2014"
 OUTPUT_PATH = "outputs/logs/baseline_results.json"
 
-N_SAMPLES = 8     
+N_SAMPLES = 8 
 MAX_NEW_TOKENS = 250  
 RANDOM_SEED = 42       
 
 
 def resolve_image_path(image_field: str, images_dir: str) -> Path:
+
     filename = Path(image_field).name 
     return Path(images_dir) / filename
 
 
 def build_prompt(question_text: str) -> str:
-
+ 
     return question_text.replace("<image>\n", "").strip()
 
 
@@ -64,6 +52,7 @@ def run_baseline():
     results = []
 
     for i, record in enumerate(samples):
+
         conversations = record["conversations"]
         human_turn = next(t for t in conversations if t["from"] == "human")
         gpt_turn = next(t for t in conversations if t["from"] == "gpt")
@@ -78,7 +67,6 @@ def run_baseline():
             continue
 
         image = Image.open(image_path).convert("RGB")
-
 
         messages = [
             {"role": "user", "content": f"<image>\n{question}"}
@@ -95,7 +83,7 @@ def run_baseline():
             output_ids = model.generate(
                 **inputs,
                 max_new_tokens=MAX_NEW_TOKENS,
-                do_sample=False, 
+                do_sample=False,
             )
 
         generated_text = tokenizer.decode(
