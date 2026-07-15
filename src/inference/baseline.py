@@ -24,7 +24,7 @@ def resolve_image_path(image_field: str, images_dir: str) -> Path:
 
 
 def build_prompt(question_text: str) -> str:
- 
+
     return question_text.replace("<image>\n", "").strip()
 
 
@@ -47,7 +47,7 @@ def run_baseline():
         val_data = json.load(f)
 
     random.seed(RANDOM_SEED)
-    samples = random.sample(list(val_data.values()), N_SAMPLES)
+    samples = random.sample(val_data.values(), N_SAMPLES)
 
     results = []
 
