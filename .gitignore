@@ -220,3 +220,6 @@ __marimo__/
 # Project data (large files, not stored in git)
 data/images(coco)/
 models/pretrained/
+.vscode
+.DS_Store
+data/raw/
