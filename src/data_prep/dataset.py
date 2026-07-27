@@ -7,6 +7,7 @@ from transformers import AutoTokenizer, AutoProcessor
 from src.inference.load_model import load_model_and_processor, MODEL_PATH
 import torch.nn.functional as F
 
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 with open("/Users/mereme/vk_generative_model/project_vk/data/raw/train.json", 'r', encoding='utf-8') as f:
     train_data = json.load(f)
