@@ -166,9 +166,9 @@ from transformers import Trainer, TrainingArguments
 arguments = TrainingArguments(
     output_dir='outputs/checkpoints',
     learning_rate=2e-4,
-    per_device_train_batch_size = 4,
-    per_device_eval_batch_size=4,
-    gradient_accumulation_steps=4,
+    per_device_train_batch_size=1,
+    per_device_eval_batch_size=1,
+    gradient_accumulation_steps=16,
     bf16=True,
     logging_steps= 3,
     num_train_epochs=3,
@@ -176,7 +176,8 @@ arguments = TrainingArguments(
     eval_strategy='epoch',
     save_total_limit=1,
     report_to="none",
-    remove_unused_columns=False
+    remove_unused_columns=False,
+    gradient_checkpointing=True,
 )
 
 random.shuffle(conv_sample)
