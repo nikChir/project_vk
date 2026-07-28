@@ -223,4 +223,3 @@ models/pretrained/
 .vscode
 .DS_Store
 data/raw/
-outputs/checkpoints/
