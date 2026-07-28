@@ -5,6 +5,7 @@
     "question": "Сколько жирафов изображено на фотографии?",
     "reference_answer": "На изображении изображено два жирафа.",
     "baseline_answer": "На фотографии изображено два жирафа.",
+    "after_training_answer": "На фотографии изображено два жирафа.",
     "image_path": "/kaggle/input/datasets/jeffaudi/coco-2014-dataset-for-yolov3/coco2014/images/val2014/COCO_val2014_000000296404.jpg"
   },
   {
@@ -13,6 +14,7 @@
     "question": "Что можно увидеть в ванной комнате на изображении?",
     "reference_answer": "На изображении видно душ и раковину в ванной комнате.",
     "baseline_answer": "На изображении можно увидеть раковину, зеркало, душевую кабину и ванну.",
+    "after_training_answer": "На изображении можно увидеть раковину, зеркало, душевую кабину и ванну.",
     "image_path": "/kaggle/input/datasets/jeffaudi/coco-2014-dataset-for-yolov3/coco2014/images/val2014/COCO_val2014_000000103306.jpg"
   },
   {
@@ -21,6 +23,7 @@
     "question": "Сколько кошек изображено на фотографии?",
     "reference_answer": "На фотографии изображено одно животное - кошка.",
     "baseline_answer": "На фотографии изображена одна кошка.",
+    "after_training_answer": "На фотографии изображена одна кошка.",
     "image_path": "/kaggle/input/datasets/jeffaudi/coco-2014-dataset-for-yolov3/coco2014/images/val2014/COCO_val2014_000000285733.jpg"
   },
   {
@@ -29,6 +32,7 @@
     "question": "Какое расположение того судна, которое находится в воде?",
     "reference_answer": "Судно находится в воде рядом с берегом.",
     "baseline_answer": "Судно находится в воде, плавая по реке.",
+    "after_training_answer": "Это судно находится в воде, двигаясь по воде.",
     "image_path": "/kaggle/input/datasets/jeffaudi/coco-2014-dataset-for-yolov3/coco2014/images/val2014/COCO_val2014_000000122251.jpg"
   },
   {
@@ -37,6 +41,7 @@
     "question": "Видно ли какие-либо особенности внешнего вида женщин, находящихся на лошадях?",
     "reference_answer": "Да, женщины на лошадях находятся в купальных костюмах. Их внешний вид в статье описывается как «красивые», что указывает на их привлекательность.",
     "baseline_answer": "Да, на фотографии две женщины находятся на лошадях в воде. Одна из женщин имеет длинные волосы, а другая - короткую. Они оба одеты в купальники.",
+    "after_training_answer": "Да, на фотографии две женщины находятся на лошадях в воде. Одна из женщин одета в купальник, а другая - в шорты.",
     "image_path": "/kaggle/input/datasets/jeffaudi/coco-2014-dataset-for-yolov3/coco2014/images/val2014/COCO_val2014_000000206838.jpg"
   },
   {
@@ -45,6 +50,7 @@
     "question": "Какое судно показано на картинке - большое или маленькое?",
     "reference_answer": "На изображении изображено большое судно.",
     "baseline_answer": "На изображении показан большой корабль.",
+    "after_training_answer": "На изображении показан большой корабль.",
     "image_path": "/kaggle/input/datasets/jeffaudi/coco-2014-dataset-for-yolov3/coco2014/images/val2014/COCO_val2014_000000331455.jpg"
   },
   {
@@ -53,6 +59,7 @@
     "question": "Какой питомец изображен на фотографии?",
     "reference_answer": "На изображении изображена собака.",
     "baseline_answer": "На фотографии изображен маленький пес.",
+    "after_training_answer": "На фотографии изображен собака.",
     "image_path": "/kaggle/input/datasets/jeffaudi/coco-2014-dataset-for-yolov3/coco2014/images/val2014/COCO_val2014_000000181969.jpg"
   },
   {
@@ -61,6 +68,7 @@
     "question": "На картинке изображена общественная или частная ванная комната?",
     "reference_answer": "На изображении изображена ванная комната в частном помещении, так как нет признаков того, что она относится к общественному месту, например, крытая кабина или указатель общественного туалета.",
     "baseline_answer": "На изображении изображена общественная ванная комната.",
+    "after_training_answer": "На изображении изображена общественная ванная комната.",
     "image_path": "/kaggle/input/datasets/jeffaudi/coco-2014-dataset-for-yolov3/coco2014/images/val2014/COCO_val2014_000000256156.jpg"
   }
 ]
