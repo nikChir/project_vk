@@ -14,7 +14,7 @@ VAL_IMAGES_DIR = "data/images/val2014"
 BASELINE_RESULTS_PATH = "outputs/logs/baseline_results.json"
 OUTPUT_PATH = "outputs/logs/after_training_results.json"
 
-ADAPTER_PATH = "outputs/checkpoints/best"
+ADAPTER_PATH = "outputs/checkpoints"
 
 N_SAMPLES = 8
 MAX_NEW_TOKENS = 250
